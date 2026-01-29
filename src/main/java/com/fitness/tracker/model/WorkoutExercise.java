@@ -25,7 +25,7 @@ public class WorkoutExercise {
     private WorkoutSession workoutSession;
     
     @NotNull(message = "Exercise is required")
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "exercise_id", nullable = false)
     private Exercise exercise;
     

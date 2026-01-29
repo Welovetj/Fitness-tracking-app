@@ -66,7 +66,7 @@ public class WorkoutSessionService {
 
     @Transactional(readOnly = true)
     public List<WorkoutSessionDTO> getAllWorkoutSessions() {
-        return workoutSessionRepository.findAll().stream()
+        return workoutSessionRepository.findAllWithExercises().stream()
                 .map(this::convertToDTO)
                 .collect(Collectors.toList());
     }

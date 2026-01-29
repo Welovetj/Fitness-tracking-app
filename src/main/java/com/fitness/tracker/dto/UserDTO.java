@@ -22,6 +22,9 @@ public class UserDTO {
     @NotBlank(message = "Full name is required")
     private String fullName;
     
+    @jakarta.validation.constraints.Positive(message = "Weight must be positive")
     private Double weight;
+    
+    @jakarta.validation.constraints.Positive(message = "Height must be positive")
     private Double height;
 }
